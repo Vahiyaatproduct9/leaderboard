@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     const data = async () => {
-      const c = await fetch('/api/data', {
+      const c = await fetch('leaderboard-production-eafb.up.railway.app/api/data', {
         method: 'GET'
       })
       const res = await c.json()
@@ -66,7 +66,7 @@ function App() {
   async function handleClaim(name) {
     if (!name) return;
 
-    const res = await fetch('/api/data', {
+    const res = await fetch('leaderboard-production-eafb.up.railway.app/api/data', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
